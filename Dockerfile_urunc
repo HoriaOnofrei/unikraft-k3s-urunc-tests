@@ -1,0 +1,7 @@
+FROM scratch
+COPY ./.unikraft/build/hashing-minimal-cpp-botan_qemu-x86_64 /unikernel/main.qemu
+COPY ./urunc.json /urunc.json
+LABEL "com.urunc.unikernel.binary"="/unikernel/main.qemu"
+LABEL "com.urunc.unikernel.cmdline"=""
+LABEL "com.urunc.unikernel.unikernelType"="unikraft"
+LABEL "com.urunc.unikernel.hypervisor"="qemu"
